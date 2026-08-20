@@ -13,9 +13,13 @@
 </head>
 
 <body>
+    <button id="btnMobile" class="btn-menu-mobile d-md-none">
+        <i class="bi bi-list"></i>
+    </button>
+
     <div class="sideBarDiv">
-        <section class="d-flex flex-column" >
-            <div class="menuSideBarDiv mt-2 d-flex flex-column justify-content-between align-items-end" >
+        <section class="d-flex flex-column">
+            <div class="menuSideBarDiv mt-2 d-flex flex-column justify-content-between align-items-end">
                 <i id="menuBtn" class="bi bi-list"></i>
             </div>
 
@@ -26,35 +30,35 @@
                             <i class="bi bi-house"></i>
                             <span class="d-none">Inicio</span>
                         </li>
-                        
+
                         <li class="nav_item">
                             <i class="bi bi-person"></i>
                             <span class="d-none">Sobre</span>
                         </li>
-                        
+
                         <li class="nav_item">
                             <i class="bi bi-book"></i>
                             <span class="d-none">Formação</span>
                         </li>
-                        
+
                         <li class="nav_item">
                             <i class="bi bi-gear"></i>
                             <span class="d-none">Habilidades e Experiência</span>
                         </li>
-                        
-                        
+
+
                         <li class="nav_item">
                             <i class="bi bi-telephone"></i>
                             <span class="d-none">Contato</span>
                         </li>
-                        
+
                         <li class="nav_item">
                             <a target="_blank" href="https://www.linkedin.com/in/leone-goveia-861a5b201/">
                                 <i class="bi bi-linkedin"></i>
                                 <span class="d-none">linkdin</span>
                             </a>
                         </li>
-                        
+
                         <li class="nav_item">
                             <a target="_blank" href="https://github.com/Leone3333">
                                 <i class="bi bi-github"></i>
@@ -69,13 +73,13 @@
 
     <div class="containerClass container-fluid">
         <main class="d-flex flex-column justify-content-between">
-            
-            <div class="conteudoHero d-flex flex-column gap-4">
-                <div class="imgPerfil">
-                    <img src="../static/imgs/perfil.jpg">
+
+            <div class="conteudoHero d-flex flex-column align-items-center align-items-md-start gap-4">
+                <div class="imgPerfil mb-3">
+                    <img src="../static/imgs/perfil.jpg" class="img-fluid">
                 </div>
-                
-                <div class="tittle">
+
+                <div class="tittle text-center text-md-start">
                     <h1>Leone Goveia</h1>
                     <span>Desenvolvedor Back-end</span>
                 </div>
@@ -88,10 +92,11 @@
         </main>
 
         <section id="sobre">
-
+            
         </section>
     </div>
 
 </body>
 <script src="../static/script.js"></script>
+
 </html>

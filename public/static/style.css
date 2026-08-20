@@ -2,7 +2,7 @@
 
 :root {
     --roxo1: #0e0d41;
-    --roxo2: #03040F;
+    --roxo2: #070920;
     --verde: #05b451;
     --branco: #fff;
 
@@ -15,33 +15,48 @@ body {
     height: 100%;
 }
 
-.sideBarDiv {
-    width: 60px;
-    height: 100%;
-    background: var(--roxo1);
+.btn-menu-mobile {
     position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-    transition: all ease-in-out 0.3s;
+    top: 15px;
+    left: 15px;
+    z-index: 10000;
+    background: var(--roxo1);
+    color: var(--branco);
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 24px;
 }
 
-.open{
+.sideBarDiv {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 280px;
+    height: 100vh;
+    background: var(--roxo1);
+    z-index: 9999;
+    
+    /* Tira sideBar do fluxo da tela e joga para fora na esquerda */
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.sideBarDiv.open {
+    transform: translateX(0);
+    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .sideBarDiv li {
     display: flex;
     justify-content: baseline;
-    align-items:center;
+    align-items: center;
 }
 
 .sideBarDiv li a {
     display: flex;
     justify-content: baseline;
-    align-items:center;
+    align-items: center;
     text-decoration: none;
     color: var(--branco);
 }
@@ -59,7 +74,7 @@ body {
     transition: ease-in-out 0.3s;
 }
 
-.sideBarDiv li i  {
+.sideBarDiv li i {
     font-size: 24px;
     font-family: Ubuntu, arial;
     text-decoration: none;
@@ -70,7 +85,7 @@ body {
     padding: 0.9rem;
 }
 
-.sideBarDiv li span  {
+.sideBarDiv li span {
     font-size: 20px;
     font-family: Ubuntu, arial;
     text-decoration: none;
@@ -80,7 +95,6 @@ body {
     padding: 0.4rem;
 }
 
-/* 1. Aplica a transição de cor em TODOS os elementos internos do li */
 .sideBarDiv li,
 .sideBarDiv li i,
 .sideBarDiv li span,
@@ -88,77 +102,118 @@ body {
     transition: color 0.2s ease-in-out;
 }
 
-/* 2. Remove declarações de cor fixas dos filhos e faz eles herdarem do pai */
 .sideBarDiv li i,
 .sideBarDiv li span,
 .sideBarDiv li a {
-    color: inherit; /* Força ícone, texto e link a usarem a cor do <li> */
+    color: inherit;
 }
 
-/* 3. Define a cor padrão e o hover unificado no <li> */
 .sideBarDiv li {
     display: flex;
     align-items: center;
-    color: var(--branco); /* Cor padrão */
+    color: var(--branco);
     cursor: pointer;
 }
 
 .sideBarDiv li:hover,
-.sideBarDiv .menuSideBarDiv i:hover
-{
+.sideBarDiv .menuSideBarDiv i:hover {
     color: var(--verde)
 }
-
 
 .containerClass {
     width: 100%;
     min-height: 100vh;
     background: var(--roxo2);
-    /* margin-left: 60px; */
 }
 
 .containerClass main {
     min-height: 100vh;
-    padding-left: 280px;
-    padding-top: 60px;
-    padding-bottom: 20px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    text-align: center;
 }
 
 .imgPerfil img {
-    width: 200px;
-    height: 200px;
-    /* border:#000 2px solid; */
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
+    object-fit: cover;
 }
 
+
 .tittle h1 {
-    font-size: 32px;
+    font-size: 1.8rem;
     font-family: Ubuntu, arial;
     text-decoration: none;
     color: var(--branco);
 }
 
 .tittle span {
-    font-size: 28px;
+    font-size: 1.3rem;
     font-family: Ubuntu, arial;
     text-decoration: none;
     color: var(--branco);
 }
 
-.divArraste{
-    position: relative;
-    top: -5vh;
+.tittle h1,
+span {
+    transition: color 0.3s ease-in;
 }
-.divArraste span{
+
+.tittle h1:hover,
+span:hover {
+    color: var(--verde);
+}
+
+.divArraste {
+    margin-top: auto;
+    position: static;
+}
+
+.divArraste span {
     font-family: Ubuntu, arial;
-    color:var(--branco);
+    color: var(--branco);
     font-size: 18px;
 }
 
-.divArraste span i{
+.divArraste span i {
     font-size: 24px;
 }
 
+@media (min-width:768px) {
+    .btn-menu-mobile {
+        display: none;
+    }
+    .sideBarDiv {
+        width: 60px;
+        transform: translateX(0);
+        height: 100%;
+        background: var(--roxo1);
+        position: fixed;
+        z-index: 999;
+        overflow: hidden;
+        transition: all ease-in-out 0.3s;
+    }
 
+    .sideBarDiv.open {
+        width: 280px;
+        box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5);
+    }
 
+    .containerClass main {
+        padding-left: 280px;
+        text-align: center;
+    }
 
+    .imgPerfil img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+
+    .tittle h1 {
+        font-size: 2.5rem;
+    }
+}
