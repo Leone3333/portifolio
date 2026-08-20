@@ -1,87 +1,164 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
-:root{
-  --roxo1:#0e0d41;
-  --roxo2:#03040F;
-  --verde:#05b451;
-  --branco:#fff;
+:root {
+    --roxo1: #0e0d41;
+    --roxo2: #03040F;
+    --verde: #05b451;
+    --branco: #fff;
 
 }
 
 html,
 body {
-  font-family: Ubuntu, arial;
-  width: 100%;
-  height: 100%;
+    font-family: Ubuntu, arial;
+    width: 100%;
+    height: 100%;
 }
 
-.sideBarDiv{
-  width:60px;
-  height:100%;
-  background:var(--roxo1);
-  position:fixed;
+.sideBarDiv {
+    width: 60px;
+    height: 100%;
+    background: var(--roxo1);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    transition: all ease-in-out 0.3s;
 }
 
-.sideBarDiv .menuSideBarDiv i{
-  font-size:28px;
-  font-family:Ubuntu,arial;
-  text-decoration:none;
-  color:var(--branco);
-  border-radius:50%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  padding:0.8rem;
-  transition: ease-in-out 0.3s;
+.open{
+    width: 280px;
 }
 
-.sideBarDiv li i{
-  font-size:24px;
-  font-family:Ubuntu,arial;
-  text-decoration:none;
-  color:var(--branco);
-  border-radius:50%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  padding:0.9rem;
-  transition: ease-in 0.3s;
+.sideBarDiv li {
+    display: flex;
+    justify-content: baseline;
+    align-items:center;
 }
 
-.sideBarDiv li i:hover,
-.sideBarDiv .menuSideBarDiv i:hover{
-  color:var(--verde)
+.sideBarDiv li a {
+    display: flex;
+    justify-content: baseline;
+    align-items:center;
+    text-decoration: none;
+    color: var(--branco);
 }
 
-.sideBarDiv li a{
-    text-decoration:none;
+.sideBarDiv .menuSideBarDiv i {
+    font-size: 28px;
+    font-family: Ubuntu, arial;
+    text-decoration: none;
+    color: var(--branco);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.9rem;
+    transition: ease-in-out 0.3s;
+}
+
+.sideBarDiv li i  {
+    font-size: 24px;
+    font-family: Ubuntu, arial;
+    text-decoration: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.9rem;
+}
+
+.sideBarDiv li span  {
+    font-size: 20px;
+    font-family: Ubuntu, arial;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.4rem;
+}
+
+/* 1. Aplica a transição de cor em TODOS os elementos internos do li */
+.sideBarDiv li,
+.sideBarDiv li i,
+.sideBarDiv li span,
+.sideBarDiv li a {
+    transition: color 0.2s ease-in-out;
+}
+
+/* 2. Remove declarações de cor fixas dos filhos e faz eles herdarem do pai */
+.sideBarDiv li i,
+.sideBarDiv li span,
+.sideBarDiv li a {
+    color: inherit; /* Força ícone, texto e link a usarem a cor do <li> */
+}
+
+/* 3. Define a cor padrão e o hover unificado no <li> */
+.sideBarDiv li {
+    display: flex;
+    align-items: center;
+    color: var(--branco); /* Cor padrão */
+    cursor: pointer;
+}
+
+.sideBarDiv li:hover,
+.sideBarDiv .menuSideBarDiv i:hover
+{
+    color: var(--verde)
+}
+
+
+.containerClass {
+    width: 100%;
+    min-height: 100vh;
+    background: var(--roxo2);
+    /* margin-left: 60px; */
+}
+
+.containerClass main {
+    min-height: 100vh;
+    padding-left: 280px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+
+.imgPerfil img {
+    width: 200px;
+    height: 200px;
+    /* border:#000 2px solid; */
+    border-radius: 50%;
+}
+
+.tittle h1 {
+    font-size: 32px;
+    font-family: Ubuntu, arial;
+    text-decoration: none;
+    color: var(--branco);
+}
+
+.tittle span {
+    font-size: 28px;
+    font-family: Ubuntu, arial;
+    text-decoration: none;
+    color: var(--branco);
+}
+
+.divArraste{
+    position: relative;
+    top: -5vh;
+}
+.divArraste span{
+    font-family: Ubuntu, arial;
     color:var(--branco);
+    font-size: 18px;
 }
 
-.container main{
-  width:100%;
-  height:auto;
-  background:var(--roxo2);
-  margin-left:300px;
+.divArraste span i{
+    font-size: 24px;
 }
 
-.imgPerfil img{
-  width:300px;
-  height:auto;
-  border:#000 2px solid;
-  border-radius:50%;
-}
 
-.tittle h1{
-  font-size:32px;
-  font-family:Ubuntu,arial;
-  text-decoration:none;
-  color:var(--branco);
-}
 
-.tittle span{
-  font-size:28px;
-  font-family:Ubuntu,arial;
-  text-decoration:none;
-  color:var(--branco);
-}
+
