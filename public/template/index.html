@@ -13,50 +13,75 @@
 </head>
 
 <body>
-    <h1>Portifolio!</h1>
-
-    <aside id="header">
-        <section class="sideBar">
-            <img src="../static/imgs/perfil.jpg">
-            <h1>Leone Goveia</h1>
-            <div class="icons-social mt-2 text-center">
-                <a target="_blank" href="https://www.linkedin.com/in/thicode/">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-                <a target="_blank" href="https://github.com/codethi">
-                    <i class="bi bi-github"></i>
-                </a>
+    <div class="sideBarDiv" >
+        <section class="d-flex flex-column justify-content-center align-itens-center" >
+            <div class="menuSideBarDiv mt-2">
+                <i class="bi bi-list"></i>
             </div>
 
-            <nav id="navMenu" class="navItens">
-                 <ul class="nav flex-column">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#inicio"><i class="bi bi-house"
-                            aria-hidden="true"></i> Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#sobre"><i class="bi bi-person" aria-hidden="true"></i> Sobre</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#habilidades"><i class="bi bi-list-check" aria-hidden="true"></i>
-                        Habilidades</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#curriculo"><i class="bi bi-file-earmark" aria-hidden="true"></i>
-                        Currículo</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#portfolio"><i class="bi bi-collection" aria-hidden="true"></i>
-                        Portfólio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contato"><i class="bi bi-envelope" aria-hidden="true"></i> Contato</a>
-                </li>
-            </ul>
-            </nav>
+            <div class="navegacaoSideBarDiv mt-4">
+                <nav>
+                    <ul class="nav flex-column">
+                        <li class="nav_item">
+                            <i class="bi bi-house"></i>
+                        </li>
+
+                        <li class="nav_item">
+                            <i class="bi bi-person"></i>
+                        </li>
+
+                        <li class="nav_item">
+                            <i class="bi bi-book"></i>
+                        </li>
+
+                        <li class="nav_item">
+                            <i class="bi bi-gear"></i>
+                        </li>
+
+
+                        <li class="nav_item">
+                            <i class="bi bi-telephone"></i>
+                        </li>
+
+                        <li class="nav_item">
+                            <a target="_blank" href="https://www.linkedin.com/in/thicode/">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </li>
+
+                        <li class="nav_item">
+                            <a target="_blank" href="https://github.com/codethi">
+                                <i class="bi bi-github"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </div>
+
+    <div class="container">
+        <main class="">
+            <div class="imgPerfil">
+                <img src="../static/imgs/perfil.jpg">
+            </div>
+
+            <div class="tittle">
+                <h1>Leone Goveia</h1>
+                <span>Desenvolvedor Back-end</span>
+            </div>
+
+            <div class="divArraste d-flex flex-row justify-content-end align-items-end">
+                <span> Arraste para mais</span>
+                <span><i class="bi bi-arrow-down-short fs-4"></i></span>
+            </div>
+        </main>
+
+        <section id="sobre">
 
         </section>
-    </aside>
+    </div>
+
 </body>
 <script src="../static/script.js"></script>
 
