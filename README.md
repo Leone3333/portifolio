@@ -1,4 +1,4 @@
-# Como incialar o servidor express
+# Como iniciar o servidor express
 
 ### Instale as dependencias
     ```bash

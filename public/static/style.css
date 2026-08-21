@@ -7,6 +7,9 @@
     --branco: #fff;
 
 }
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 
 html,
 body {
@@ -36,7 +39,7 @@ body {
     height: 100vh;
     background: var(--roxo1);
     z-index: 9999;
-    
+
     /* Tira sideBar do fluxo da tela e joga para fora na esquerda */
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
@@ -182,10 +185,46 @@ span:hover {
     font-size: 24px;
 }
 
+.divSecoes {
+    width: 100%;
+    height: auto;
+    padding-left: 320px;
+    background: var(--branco);
+}
+
+.divSobre{
+    padding-top: 50px;
+    padding-right: 280px;
+    text-align: left;
+    /* border: 1px solid #dde1f4; */
+    box-shadow: #000;
+}
+
+.divSobre section h2 {
+    font-size: 32px;
+}
+
+.divSobre section p {
+    font-size: 24px;
+}
+
+.divSobre section p,h2 {
+    font-family: Ubuntu, arial;
+    color: #000;
+}
+
+.divisao1{
+    width: calc(100% - 380px);
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    border: 2px solid var(--roxo1);
+}
+
 @media (min-width:768px) {
     .btn-menu-mobile {
         display: none;
     }
+
     .sideBarDiv {
         width: 60px;
         transform: translateX(0);
@@ -203,7 +242,7 @@ span:hover {
     }
 
     .containerClass main {
-        padding-left: 280px;
+        padding-left: 320px;
         text-align: center;
     }
 
