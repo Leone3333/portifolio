@@ -1,258 +1,307 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
 :root {
-    --roxo1: #0e0d41;
-    --roxo2: #070920;
-    --verde: #05b451;
-    --branco: #fff;
+  --roxo1: #0e0d41;
+  --roxo2: #070920;
+  --verde: #05b451;
+  --branco: #fff;
 
 }
-*, *::before, *::after {
-    box-sizing: border-box;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 html,
 body {
-    font-family: Ubuntu, arial;
-    width: 100%;
-    height: 100%;
+  font-family: Ubuntu, arial;
+  width: 100%;
+  height: 100%;
 }
 
 .btn-menu-mobile {
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    z-index: 10000;
-    background: var(--roxo1);
-    color: var(--branco);
-    border: none;
-    border-radius: 8px;
-    padding: 8px 12px;
-    font-size: 24px;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 10000;
+  background: var(--roxo1);
+  color: var(--branco);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 24px;
 }
 
 .sideBarDiv {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 280px;
-    height: 100vh;
-    background: var(--roxo1);
-    z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100vh;
+  background: var(--roxo1);
+  z-index: 9999;
 
-    /* Tira sideBar do fluxo da tela e joga para fora na esquerda */
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
+  /* Tira sideBar do fluxo da tela e joga para fora na esquerda */
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
 }
 
 .sideBarDiv.open {
-    transform: translateX(0);
-    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.5);
+  transform: translateX(0);
+  box-shadow: 10px 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .sideBarDiv li {
-    display: flex;
-    justify-content: baseline;
-    align-items: center;
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
 }
 
 .sideBarDiv li a {
-    display: flex;
-    justify-content: baseline;
-    align-items: center;
-    text-decoration: none;
-    color: var(--branco);
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  text-decoration: none;
+  color: var(--branco);
 }
 
 .sideBarDiv .menuSideBarDiv i {
-    font-size: 28px;
-    font-family: Ubuntu, arial;
-    text-decoration: none;
-    color: var(--branco);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.9rem;
-    transition: ease-in-out 0.3s;
+  font-size: 28px;
+  font-family: Ubuntu, arial;
+  text-decoration: none;
+  color: var(--branco);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.9rem;
+  transition: ease-in-out 0.3s;
 }
 
 .sideBarDiv li i {
-    font-size: 24px;
-    font-family: Ubuntu, arial;
-    text-decoration: none;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.9rem;
+  font-size: 24px;
+  font-family: Ubuntu, arial;
+  text-decoration: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.9rem;
 }
 
 .sideBarDiv li span {
-    font-size: 20px;
-    font-family: Ubuntu, arial;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.4rem;
+  font-size: 20px;
+  font-family: Ubuntu, arial;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4rem;
 }
 
 .sideBarDiv li,
 .sideBarDiv li i,
 .sideBarDiv li span,
 .sideBarDiv li a {
-    transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 
 .sideBarDiv li i,
 .sideBarDiv li span,
 .sideBarDiv li a {
-    color: inherit;
+  color: inherit;
 }
 
 .sideBarDiv li {
-    display: flex;
-    align-items: center;
-    color: var(--branco);
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: var(--branco);
+  cursor: pointer;
 }
 
 .sideBarDiv li:hover,
 .sideBarDiv .menuSideBarDiv i:hover {
-    color: var(--verde)
+  color: var(--verde)
 }
 
 .containerClass {
-    width: 100%;
-    min-height: 100vh;
-    background: var(--roxo2);
+  width: 100%;
+  min-height: 100vh;
+  background: var(--roxo2);
 }
 
 .containerClass main {
-    min-height: 100vh;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 5rem;
-    padding-bottom: 2rem;
-    text-align: center;
+  min-height: 100vh;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  text-align: center;
 }
 
 .imgPerfil img {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    object-fit: cover;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 
 .tittle h1 {
-    font-size: 1.8rem;
-    font-family: Ubuntu, arial;
-    text-decoration: none;
-    color: var(--branco);
+  font-size: 1.8rem;
+  font-family: Ubuntu, arial;
+  text-decoration: none;
+  color: var(--branco);
 }
 
 .tittle span {
-    font-size: 1.3rem;
-    font-family: Ubuntu, arial;
-    text-decoration: none;
-    color: var(--branco);
+  font-size: 1.3rem;
+  font-family: Ubuntu, arial;
+  text-decoration: none;
+  color: var(--branco);
 }
 
 .tittle h1,
 span {
-    transition: color 0.3s ease-in;
+  transition: color 0.3s ease-in;
 }
 
 .tittle h1:hover,
-span:hover {
-    color: var(--verde);
+.tittle span:hover {
+  color: var(--verde);
 }
 
 .divArraste {
-    margin-top: auto;
-    position: static;
+  margin-top: auto;
+  position: static;
 }
 
 .divArraste span {
-    font-family: Ubuntu, arial;
-    color: var(--branco);
-    font-size: 18px;
+  font-family: Ubuntu, arial;
+  color: var(--branco);
+  font-size: 18px;
 }
 
 .divArraste span i {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .divSecoes {
-    width: 100%;
-    height: auto;
-    padding-left: 320px;
-    background: var(--branco);
+  width: 100%;
+  height: auto;
+  padding-left: 320px;
+  background: var(--branco);
 }
 
-.divSobre{
-    padding-top: 50px;
-    padding-right: 280px;
-    text-align: left;
-    /* border: 1px solid #dde1f4; */
-    box-shadow: #000;
+.divSobre {
+  padding-top: 50px;
+  padding-right: 280px;
+  text-align: left;
+  /* border: 1px solid #dde1f4; */
+  box-shadow: #000;
 }
 
-.divSobre section h2 {
-    font-size: 32px;
+.divSobre h2 {
+  font-size: 32px;
 }
 
-.divSobre section p {
-    font-size: 24px;
+.divSobre  p {
+  font-size: 24px;
 }
 
-.divSobre section p,h2 {
-    font-family: Ubuntu, arial;
-    color: #000;
+.divSobre  p,
+h2 {
+  font-family: Ubuntu, arial;
+  color: #000;
 }
 
-.divisao1{
-    width: calc(100% - 380px);
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    border: 2px solid var(--roxo1);
+.divisao1 {
+  width: calc(100% - 380px);
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  border: 2px solid var(--roxo1);
+}
+
+.divFormacao section p {
+  font-size: 24px;
+}
+
+
+.loadBar {
+  /* width: 100%;
+  max-width: 400px; */
+  margin-bottom: 2rem;
+}
+
+.skillName {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+  color: #000;
+}
+
+.bar {
+  width: 100%;
+  height: 18px;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #07ee6b;
+}
+
+.barFill {
+  height: 100%;
+  background-color: var(--verde);
+  border-radius: 20px 0 0 20px;
+  transition: width 1s ease-in-out;
+}
+
+.textLoadBar {
+  margin-top: 6px;
+}
+
+.textLoadBar span {
+  font-size: 14px;
+  font-weight: 600;
+  /* color: var(--verde); */
 }
 
 @media (min-width:768px) {
-    .btn-menu-mobile {
-        display: none;
-    }
+  .btn-menu-mobile {
+    display: none;
+  }
 
-    .sideBarDiv {
-        width: 60px;
-        transform: translateX(0);
-        height: 100%;
-        background: var(--roxo1);
-        position: fixed;
-        z-index: 999;
-        overflow: hidden;
-        transition: all ease-in-out 0.3s;
-    }
+  .sideBarDiv {
+    width: 60px;
+    transform: translateX(0);
+    height: 100%;
+    background: var(--roxo1);
+    position: fixed;
+    z-index: 999;
+    overflow: hidden;
+    transition: all ease-in-out 0.3s;
+  }
 
-    .sideBarDiv.open {
-        width: 280px;
-        box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5);
-    }
+  .sideBarDiv.open {
+    width: 280px;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5);
+  }
 
-    .containerClass main {
-        padding-left: 320px;
-        text-align: center;
-    }
+  .containerClass main {
+    padding-left: 320px;
+    text-align: center;
+  }
 
-    .imgPerfil img {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-    }
+  .imgPerfil img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
 
-    .tittle h1 {
-        font-size: 2.5rem;
-    }
+  .tittle h1 {
+    font-size: 2.5rem;
+  }
 }

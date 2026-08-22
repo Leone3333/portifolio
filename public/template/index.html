@@ -27,35 +27,44 @@
                 <nav>
                     <ul class="nav flex-column gap-2">
                         <li class="nav_item">
-                            <i class="bi bi-house"></i>
-                            <span class="d-none">Inicio</span>
+                            <a href="#inicio">
+                                <i class="bi bi-house"></i>
+                                <span class="d-none">Inicio</span>
+                            </a>
                         </li>
 
                         <li class="nav_item">
-                            <i class="bi bi-person"></i>
-                            <span class="d-none">Sobre</span>
+                            <a href="#sobre">
+                                <i class="bi bi-person"></i>
+                                <span class="d-none">Sobre</span>
+                            </a>
                         </li>
 
                         <li class="nav_item">
-                            <i class="bi bi-book"></i>
-                            <span class="d-none">Formação</span>
+                            <a href="#formacao">
+                                <i class="bi bi-book"></i>
+                                <span class="d-none">Formação</span>
+                            </a>
                         </li>
 
                         <li class="nav_item">
-                            <i class="bi bi-gear"></i>
-                            <span class="d-none">Habilidades e Experiência</span>
+                            <a href="#habilidades">
+                                <i class="bi bi-gear"></i>
+                                <span class="d-none">Habilidades e Experiência</span>
+                            </a>
                         </li>
 
-
                         <li class="nav_item">
-                            <i class="bi bi-telephone"></i>
-                            <span class="d-none">Contato</span>
+                            <a href="#contato">
+                                <i class="bi bi-telephone"></i>
+                                <span class="d-none">Contato</span>
+                            </a>
                         </li>
 
                         <li class="nav_item">
                             <a target="_blank" href="https://www.linkedin.com/in/leone-goveia-861a5b201/">
                                 <i class="bi bi-linkedin"></i>
-                                <span class="d-none">linkdin</span>
+                                <span class="d-none">LinkedIn</span>
                             </a>
                         </li>
 
@@ -71,31 +80,33 @@
         </section>
     </div>
 
+    <section id="inicio">
     <div class="containerClass">
         <main class="d-flex flex-column justify-content-between">
 
-            <div class="conteudoHero d-flex flex-column align-items-center align-items-md-start gap-4">
-                <div class="imgPerfil mb-3">
-                    <img src="../static/imgs/perfil.jpg" class="img-fluid">
+                <div class="conteudoHero d-flex flex-column align-items-center align-items-md-start gap-4">
+                    <div class="imgPerfil mb-3">
+                        <img src="../static/imgs/perfil.jpg" class="img-fluid">
+                    </div>
+                    
+                    <div class="tittle text-center text-md-start">
+                        <h1>Leone Goveia</h1>
+                        <span>Desenvolvedor Back-end</span>
+                    </div>
                 </div>
-
-                <div class="tittle text-center text-md-start">
-                    <h1>Leone Goveia</h1>
-                    <span>Desenvolvedor Back-end</span>
+                
+                <div class="divArraste d-flex flex-row justify-content-end align-items-center">
+                    <span> Arraste para mais</span>
+                    <span><i class="bi bi-arrow-down-short"></i></span>
                 </div>
-            </div>
-
-            <div class="divArraste d-flex flex-row justify-content-end align-items-center">
-                <span> Arraste para mais</span>
-                <span><i class="bi bi-arrow-down-short"></i></span>
-            </div>
-        </main>
+            </main>
+        </section>
 
         <div class="divSecoes">
 
+            <section id="sobre">
             <div class="divSobre">
-                <section id="sobre">
-                    <h2>Sobre</h2>
+                    <h2 class="mb-3">Sobre</h2>
                     <p>Olá meu nome é Leone Goveia De Almeida, tenho 22 anos e adoro tecnologia, estou em busca de
                         migrar
                         para área de desenvolvimento, como estágiario ou junior, em uma empresa onde eu possa contribuir
@@ -103,19 +114,172 @@
                         minhas habilidades desenvolvidas ao longos dos anos. Este portifólio agrega minhas competências
                         e
                         qualificações.</p>
+                    </div>
                 </section>
-            </div>
 
             <div class="divisao1"></div>
 
+            <section id="formacao">
             <div class="divFormacao">
-                <section id="formacao">
-                    <h2>Formação</h2>
-                    <p></p>
-                </section>
-            </div>
+                    <h2 class="mb-3">Formação</h2>
+                    <h3>Tecnico em desenvolvimento de sistemas - SENAI</h3>
+                    <p>2022 - 2023</p>
 
-        </div>
+                    <h3>Superior em Sistemas de informação - UNIFACS</h3>
+                    <p>2024 - 2028</p>
+                </div>
+            </section>
+
+            <div class="divisao1"></div>
+
+            <section id="habilidades">
+            <div class="habilidadesDiv">
+                    <h2 class="mb-3">Habilidades e Experiência</h2>
+
+                    <div class="loadBars row gap-4">
+                        <div class="loadBar col-3">
+                            <span class="skillName">Git / GitHub</span>
+                            <div class="bar">
+                                <div class="barFill" style="width: 65%;"></div>
+                            </div>
+
+                            <div class="textLoadBar d-flex justify-content-between">
+
+                                <span>Basico</span>
+                                <span>intermediario</span>
+                                <span>Avançado</span>
+                            </div>
+                        </div>
+
+                        <div class="loadBar col-3">
+                            <span class="skillName">PHP e Laravel</span>
+                            <div class="bar">
+                                <div class="barFill" style="width: 70%;"></div>
+                            </div>
+
+                            <div class="textLoadBar d-flex justify-content-between">
+
+                                <span>Basico</span>
+                                <span>intermediario</span>
+                                <span>Avançado</span>
+                            </div>
+                        </div>
+
+                        <div class="loadBar col-3">
+                            <span class="skillName">API´s Getway</span>
+                            <div class="bar">
+                                <div class="barFill" style="width: 50%;"></div>
+                            </div>
+
+                            <div class="textLoadBar d-flex justify-content-between">
+
+                                <span>Basico</span>
+                                <span>intermediario</span>
+                                <span>Avançado</span>
+                            </div>
+                        </div>
+
+                        <div class="loadBar col-3">
+                            <span class="skillName">Python</span>
+                            <div class="bar">
+                                <div class="barFill" style="width: 55%;"></div>
+                            </div>
+
+                            <div class="textLoadBar d-flex justify-content-between">
+
+                                <span>Basico</span>
+                                <span>intermediario</span>
+                                <span>Avançado</span>
+                            </div>
+                        </div>
+
+                        <div class="loadBar col-3">
+                            <span class="skillName">NodeJs</span>
+                            <div class="bar">
+                                <div class="barFill" style="width: 60%;"></div>
+                            </div>
+
+                            <div class="textLoadBar d-flex justify-content-between">
+
+                                <span>Basico</span>
+                                <span>intermediario</span>
+                                <span>Avançado</span>
+                            </div>
+                        </div>
+
+                        <div class="loadBar col-3">
+                            <span class="skillName">Java</span>
+                            <div class="bar">
+                                <div class="barFill" style="width: 40%;"></div>
+                            </div>
+
+                            <div class="textLoadBar d-flex justify-content-between">
+
+                                <span>Basico</span>
+                                <span>intermediario</span>
+                                <span>Avançado</span>
+                            </div>
+                        </div>
+
+                        <div class="loadBar col-3">
+                            <span class="skillName">Bootstrap e css</span>
+                            <div class="bar">
+                                <div class="barFill" style="width: 40%;"></div>
+                            </div>
+
+                            <div class="textLoadBar d-flex justify-content-between">
+
+                                <span>Basico</span>
+                                <span>intermediario</span>
+                                <span>Avançado</span>
+                            </div>
+                        </div>
+
+                        <div class="loadBar col-3">
+                            <span class="skillName">MySql</span>
+                            <div class="bar">
+                                <div class="barFill" style="width: 65%;"></div>
+                            </div>
+
+                            <div class="textLoadBar d-flex justify-content-between">
+
+                                <span>Basico</span>
+                                <span>intermediario</span>
+                                <span>Avançado</span>
+                            </div>
+                        </div>
+
+                        <div class="loadBar col-3">
+                            <span class="skillName">Micro serviços com AWS</span>
+                            <div class="bar">
+                                <div class="barFill" style="width: 50%;"></div>
+                            </div>
+
+                            <div class="textLoadBar d-flex justify-content-between">
+
+                                <span>Basico</span>
+                                <span>intermediario</span>
+                                <span>Avançado</span>
+                            </div>
+                        </div>
+
+                        <div class="loadBar col-3">
+                            <span class="skillName">Testes de Software</span>
+                            <div class="bar">
+                                <div class="barFill" style="width: 25%;"></div>
+                            </div>
+
+                            <div class="textLoadBar d-flex justify-content-between">
+
+                                <span>Basico</span>
+                                <span>intermediario</span>
+                                <span>Avançado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
 </body>
