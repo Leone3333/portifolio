@@ -14,11 +14,18 @@
   box-sizing: border-box;
 }
 
+* {
+  max-width: 100%;
+}
+
+
 html,
 body {
+  scroll-behavior: smooth;
   font-family: Ubuntu, arial;
   width: 100%;
   height: 100%;
+  overflow-x: hidden
 }
 
 .btn-menu-mobile {
@@ -203,15 +210,40 @@ span {
   box-shadow: #000;
 }
 
-.divSobre h2 {
+.divExperiencia, .divContato{
+  padding-top: 10px;
+  padding-right: 120px;
+  /* border: 1px solid #dde1f4; */
+  box-shadow: #000;
+}
+
+
+.formularioContato{
+  width: 70%;
+}
+
+.formularioContato button{
+  width: 100px;
+  height: 40px;
+}
+
+.divSobre h2,
+.divFormacao h2,
+.divExperiencia h2 {
   font-size: 32px;
 }
 
-.divSobre  p {
+.divSobre p,
+.divFormacao p,
+.divExperiencia p {
   font-size: 24px;
 }
 
-.divSobre  p,
+.divSobre p,
+h2,
+.divFormacao p,
+h2,
+.divExperiencia p,
 h2 {
   font-family: Ubuntu, arial;
   color: #000;
@@ -222,10 +254,6 @@ h2 {
   margin-top: 3rem;
   margin-bottom: 3rem;
   border: 2px solid var(--roxo1);
-}
-
-.divFormacao section p {
-  font-size: 24px;
 }
 
 
@@ -268,6 +296,7 @@ h2 {
   font-weight: 600;
   /* color: var(--verde); */
 }
+
 
 @media (min-width:768px) {
   .btn-menu-mobile {

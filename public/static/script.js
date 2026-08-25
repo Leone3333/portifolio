@@ -2,7 +2,7 @@ let btn_menu = document.querySelector('#menuBtn');
 let side_bar = document.querySelector('.sideBarDiv');
 let textos_menu = document.querySelectorAll('.nav_item span');
 let btn_mobile = document.getElementById('btnMobile');
-
+let btn_formulario = document.getElementById('btn_formulario')
 
 btn_menu.addEventListener('click', () => {
     console.log(textos_menu);
@@ -47,3 +47,6 @@ btn_menu.addEventListener('click', () => {
     }
 })
 
+btn_formulario.addEventListener('click', () =>{
+    alert(`Email enviado para leone com sucesso!`)
+})
