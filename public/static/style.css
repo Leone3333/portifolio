@@ -5,7 +5,6 @@
   --roxo2: #070920;
   --verde: #05b451;
   --branco: #fff;
-
 }
 
 *,
@@ -14,18 +13,13 @@
   box-sizing: border-box;
 }
 
-* {
-  max-width: 100%;
-}
-
-
 html,
 body {
   scroll-behavior: smooth;
   font-family: Ubuntu, arial;
   width: 100%;
   height: 100%;
-  overflow-x: hidden
+  overflow-x: hidden;
 }
 
 .btn-menu-mobile {
@@ -49,8 +43,6 @@ body {
   height: 100vh;
   background: var(--roxo1);
   z-index: 9999;
-
-  /* Tira sideBar do fluxo da tela e joga para fora na esquerda */
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
 }
@@ -60,37 +52,18 @@ body {
   box-shadow: 10px 0 20px rgba(0, 0, 0, 0.5);
 }
 
-.sideBarDiv li {
-  display: flex;
-  justify-content: baseline;
-  align-items: center;
-}
-
 .sideBarDiv li a {
   display: flex;
-  justify-content: baseline;
   align-items: center;
   text-decoration: none;
   color: var(--branco);
+  transition: color 0.2s ease-in-out;
 }
 
-.sideBarDiv .menuSideBarDiv i {
-  font-size: 28px;
-  font-family: Ubuntu, arial;
-  text-decoration: none;
-  color: var(--branco);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.9rem;
-  transition: ease-in-out 0.3s;
-}
-
+.sideBarDiv .menuSideBarDiv i,
 .sideBarDiv li i {
   font-size: 24px;
-  font-family: Ubuntu, arial;
-  text-decoration: none;
+  color: var(--branco);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -100,37 +73,12 @@ body {
 
 .sideBarDiv li span {
   font-size: 20px;
-  font-family: Ubuntu, arial;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 0.4rem;
-}
-
-.sideBarDiv li,
-.sideBarDiv li i,
-.sideBarDiv li span,
-.sideBarDiv li a {
-  transition: color 0.2s ease-in-out;
-}
-
-.sideBarDiv li i,
-.sideBarDiv li span,
-.sideBarDiv li a {
-  color: inherit;
-}
-
-.sideBarDiv li {
-  display: flex;
-  align-items: center;
-  color: var(--branco);
-  cursor: pointer;
 }
 
 .sideBarDiv li:hover,
 .sideBarDiv .menuSideBarDiv i:hover {
-  color: var(--verde)
+  color: var(--verde);
 }
 
 .containerClass {
@@ -141,10 +89,7 @@ body {
 
 .containerClass main {
   min-height: 100vh;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 5rem;
-  padding-bottom: 2rem;
+  padding: 5rem 1.5rem 2rem 1.5rem;
   text-align: center;
 }
 
@@ -155,23 +100,15 @@ body {
   object-fit: cover;
 }
 
-
 .tittle h1 {
   font-size: 1.8rem;
-  font-family: Ubuntu, arial;
-  text-decoration: none;
   color: var(--branco);
+  transition: color 0.3s ease-in;
 }
 
 .tittle span {
   font-size: 1.3rem;
-  font-family: Ubuntu, arial;
-  text-decoration: none;
   color: var(--branco);
-}
-
-.tittle h1,
-span {
   transition: color 0.3s ease-in;
 }
 
@@ -182,11 +119,9 @@ span {
 
 .divArraste {
   margin-top: auto;
-  position: static;
 }
 
 .divArraste span {
-  font-family: Ubuntu, arial;
   color: var(--branco);
   font-size: 18px;
 }
@@ -195,76 +130,62 @@ span {
   font-size: 24px;
 }
 
+/* Regras Mobile Base para Seções */
 .divSecoes {
   width: 100%;
-  height: auto;
-  padding-left: 320px;
+  padding: 2rem 1.5rem;
   background: var(--branco);
 }
 
-.divSobre {
-  padding-top: 50px;
-  padding-right: 280px;
+.divSobre,
+.divFormacao,
+.habilidadesDiv,
+.divExperiencia,
+.divContato {
+  padding: 10px 0;
   text-align: left;
-  /* border: 1px solid #dde1f4; */
-  box-shadow: #000;
 }
 
-.divExperiencia, .divContato{
-  padding-top: 10px;
-  padding-right: 120px;
-  /* border: 1px solid #dde1f4; */
-  box-shadow: #000;
+.formularioContato {
+  width: 100%;
 }
 
-
-.formularioContato{
-  width: 70%;
-}
-
-.formularioContato button{
-  width: 100px;
-  height: 40px;
+.formularioContato button {
+  width: 100%;
+  height: 45px;
 }
 
 .divSobre h2,
 .divFormacao h2,
-.divExperiencia h2 {
-  font-size: 32px;
+.habilidadesDiv h2,
+.divExperiencia h2,
+.divContato h2 {
+  font-size: 26px;
+  font-family: Ubuntu, arial;
+  color: #000;
 }
 
 .divSobre p,
 .divFormacao p,
 .divExperiencia p {
-  font-size: 24px;
-}
-
-.divSobre p,
-h2,
-.divFormacao p,
-h2,
-.divExperiencia p,
-h2 {
+  font-size: 16px;
   font-family: Ubuntu, arial;
-  color: #000;
+  color: #333;
+  line-height: 1.6;
 }
 
 .divisao1 {
-  width: calc(100% - 380px);
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  border: 2px solid var(--roxo1);
+  width: 100%;
+  margin: 2rem 0;
+  border: 1.5px solid var(--roxo1);
 }
 
-
 .loadBar {
-  /* width: 100%;
-  max-width: 400px; */
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .skillName {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   margin-bottom: 8px;
   display: block;
@@ -273,7 +194,7 @@ h2 {
 
 .bar {
   width: 100%;
-  height: 18px;
+  height: 16px;
   background-color: #f5f5f5;
   border-radius: 20px;
   overflow: hidden;
@@ -288,17 +209,19 @@ h2 {
 }
 
 .textLoadBar {
-  margin-top: 6px;
-}
+display: flex;
+  justify-content: space-between;
+  margin-top: 6px;}
 
 .textLoadBar span {
-  font-size: 14px;
-  font-weight: 600;
-  /* color: var(--verde); */
+  font-size: 12px;
+  font-weight: 500;
+  color: #555;
+  white-space: nowrap; /* Impede a quebra de linha individual de cada palavra */
 }
 
-
-@media (min-width:768px) {
+/* Regras Desktop (A partir de 768px) */
+@media (min-width: 768px) {
   .btn-menu-mobile {
     display: none;
   }
@@ -306,9 +229,6 @@ h2 {
   .sideBarDiv {
     width: 60px;
     transform: translateX(0);
-    height: 100%;
-    background: var(--roxo1);
-    position: fixed;
     z-index: 999;
     overflow: hidden;
     transition: all ease-in-out 0.3s;
@@ -321,16 +241,55 @@ h2 {
 
   .containerClass main {
     padding-left: 320px;
-    text-align: center;
+    text-align: left;
+  }
+
+  .divSecoes {
+    padding-left: 320px;
+    padding-right: 40px;
+  }
+
+  .divSobre,
+  .divFormacao,
+  .habilidadesDiv,
+  .divExperiencia,
+  .divContato {
+    padding-right: 40px;
+  }
+
+  .formularioContato {
+    width: 60%;
+  }
+
+  .formularioContato button {
+    width: 120px;
   }
 
   .imgPerfil img {
     width: 200px;
     height: 200px;
-    border-radius: 50%;
   }
 
   .tittle h1 {
     font-size: 2.5rem;
+  }
+
+  .divSobre h2,
+  .divFormacao h2,
+  .habilidadesDiv h2,
+  .divExperiencia h2,
+  .divContato h2 {
+    font-size: 32px;
+  }
+
+  .divSobre p,
+  .divFormacao p,
+  .divExperiencia p {
+    font-size: 20px;
+  }
+
+  .divisao1 {
+    width: 100%;
+    margin: 3rem 0;
   }
 }
