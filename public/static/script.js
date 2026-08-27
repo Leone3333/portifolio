@@ -2,9 +2,7 @@ let btn_menu = document.querySelector('#menuBtn');
 let side_bar = document.querySelector('.sideBarDiv');
 let textos_menu = document.querySelectorAll('.nav_item span');
 let btn_mobile = document.getElementById('btnMobile');
-let form = document.getElementById("formContato");
-let statusDiv = document.getElementById('statusForm');
-let btn_formulario = document.getElementById('btn_formulario');
+
 
 btn_menu.addEventListener('click', () => {
     console.log(textos_menu);
@@ -49,29 +47,45 @@ btn_mobile.addEventListener('click', () => {
     }
 })
 
-form.addEventListener('submit', async function (e) {
-    e.preventDefault(); // Impede o redirecionamento padrão do navegador
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("formContato");
+    const statusDiv = document.getElementById("statusForm");
+    const btn = document.getElementById("btn_formulario");
 
-    btn_formulario.disable = true
-    btn_formulario.innerText = 'Enviando...'
-    statusDiv.innerHTML = "";
-
-    const data = new FormData(form)
-
-    try {
-
-        const responde = await fetch(form.action, { method: form.method, body: data, headers: { 'Accept': 'application/json' } })
-
-
-        if (responde.ok) {
-            statusDiv.innerHTML = "<span style='color:green;'>Email enviado com sucesso!</span>";
-        } else {
-            statusDiv.innerHTML = "<span style='color:red;'>Ocorreu um erro no envio do email :( por favor tente contato pelo linkdn</span>";
-        }
-    } catch (error) {
-        statusDiv.innerHTML = "<span style='color:red;'>Ocorreu um erro de conexão :( por favor tente contato pelo linkdn</span>";
-    } finally {
-        btn_formulario.disable = false
-        btn_formulario.innerText = 'Enviar'
+    if (!form) {
+        console.error("Formulário #formContato não foi encontrado na página.");
+        return;
     }
-})
+
+    form.addEventListener("submit", async function (e) {
+        e.preventDefault(); // Bloqueia o redirecionamento nativo do HTML
+
+        btn.disabled = true;
+        btn.innerText = "Enviando...";
+        statusDiv.innerHTML = "";
+
+        const data = new FormData(form);
+
+        try {
+            const response = await fetch(form.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                statusDiv.innerHTML = "<span style='color: green; font-weight: bold;'>Mensagem enviada com sucesso!</span>";
+                form.reset();
+            } else {
+                statusDiv.innerHTML = "<span style='color: red;'>Erro ao enviar. Tente novamente.</span>";
+            }
+        } catch (error) {
+            statusDiv.innerHTML = "<span style='color: red;'>Erro de rede ao tentar enviar.</span>";
+        } finally {
+            btn.disabled = false;
+            btn.innerText = "Enviar";
+        }
+    });
+});
