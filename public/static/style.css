@@ -52,11 +52,14 @@ body {
   box-shadow: 10px 0 20px rgba(0, 0, 0, 0.5);
 }
 
-.sideBarDiv li {
+.sideBarDiv li a {
   display: flex;
   align-items: center;
   text-decoration: none;
   color: var(--branco);
+}
+
+.sideBarDiv li{
   transition: color 0.3s ease-in-out;
 }
 
@@ -209,17 +212,15 @@ body {
 }
 
 .textLoadBar {
-  display: flex;
+display: flex;
   justify-content: space-between;
-  margin-top: 6px;
-}
+  margin-top: 6px;}
 
 .textLoadBar span {
   font-size: 12px;
   font-weight: 500;
   color: #555;
-  white-space: nowrap;
-  /* Impede a quebra de linha individual de cada palavra */
+  white-space: nowrap; /* Impede a quebra de linha individual de cada palavra */
 }
 
 /* Regras Desktop (A partir de 768px) */
@@ -234,11 +235,6 @@ body {
     z-index: 999;
     overflow: hidden;
     transition: all ease-in-out 0.3s;
-  }
-
-  .sideBarDiv li:hover,
-  .sideBarDiv .menuSideBarDiv i:hover {
-    color: var(--verde);
   }
 
   .sideBarDiv.open {
