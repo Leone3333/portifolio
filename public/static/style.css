@@ -57,25 +57,27 @@ body {
   align-items: center;
   text-decoration: none;
   color: var(--branco);
-  transition: color 0.3s ease-in-out;
+  transition: color 0.2s ease-in;
 }
 
 
 .sideBarDiv .menuSideBarDiv i,
 .sideBarDiv li i {
   font-size: 24px;
+  width: 60px;          
+  height: 48px;
   color: var(--branco);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.9rem;
-  transition: color 0.3s ease-in-out;
+  padding: 0;
+  transition: color 0.2s ease-in;
 }
 
-.sideBarDiv li span {
-  font-size: 20px;
-  padding: 0.4rem;
+.sideBarDiv .navegacaoSideBarDiv ul {
+  padding-left: 0;
+  margin-bottom: 0;
 }
 
 .sideBarDiv li:hover i,
