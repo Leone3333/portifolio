@@ -74,13 +74,13 @@ async function enviarFormulario(event) {
         });
 
         if (response.ok) {
-            if (statusDiv) statusDiv.innerHTML = "<span style='color: #00ff7f; font-weight: bold;'>Mensagem enviada com sucesso!</span>";
+            if (statusDiv) statusDiv.innerHTML = "<span style='color: #00cf67; font-weight: bold;'>Mensagem enviada com sucesso!</span>";
             form.reset();
         } else {
-            if (statusDiv) statusDiv.innerHTML = "<span style='color: #ff4d4d;'>Erro ao enviar. Tente novamente.</span>";
+            if (statusDiv) statusDiv.innerHTML = "<span style='color: #e82929;'>Erro ao enviar. Tente novamente.</span>";
         }
     } catch (error) {
-        if (statusDiv) statusDiv.innerHTML = "<span style='color: #ff4d4d;'>Erro de conexão ao enviar.</span>";
+        if (statusDiv) statusDiv.innerHTML = "<span style='color: #e82929;'>Erro de conexão ao enviar.</span>";
     } finally {
         if (btn) {
             btn.disabled = false;
