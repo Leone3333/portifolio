@@ -76,7 +76,7 @@ body {
   padding: 0.4rem;
 }
 
-.sideBarDiv li:hover,
+.sideBarDiv li a:hover,
 .sideBarDiv .menuSideBarDiv i:hover {
   color: var(--verde);
 }
