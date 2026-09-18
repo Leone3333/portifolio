@@ -49,42 +49,42 @@ btn_mobile.addEventListener('click', () => {
     }
 })
 
-async function enviarFormulario(event) {
-    event.preventDefault(); // MÁXIMA PRIORIDADE: Cancela o envio nativo na hora!
+// async function enviarFormulario(event) {
+//     event.preventDefault(); // MÁXIMA PRIORIDADE: Cancela o envio nativo na hora!
 
-    const form = event.target;
-    const btn = document.getElementById("btn_formulario");
-    const statusDiv = document.getElementById("statusForm");
+//     const form = event.target;
+//     const btn = document.getElementById("btn_formulario");
+//     const statusDiv = document.getElementById("statusForm");
 
-    if (btn) {
-        btn.disabled = true;
-        btn.innerText = "Enviando...";
-    }
-    if (statusDiv) statusDiv.innerHTML = "";
+//     if (btn) {
+//         btn.disabled = true;
+//         btn.innerText = "Enviando...";
+//     }
+//     if (statusDiv) statusDiv.innerHTML = "";
 
-    const data = new FormData(form);
+//     const data = new FormData(form);
 
-    try {
-        const response = await fetch(form.action, {
-            method: form.method,
-            body: data,
-            headers: {
-                'Accept': 'application/json'
-            }
-        });
+//     try {
+//         const response = await fetch(form.action, {
+//             method: form.method,
+//             body: data,
+//             headers: {
+//                 'Accept': 'application/json'
+//             }
+//         });
 
-        if (response.ok) {
-            if (statusDiv) statusDiv.innerHTML = "<span style='color: #00ff7f; font-weight: bold;'>Mensagem enviada com sucesso!</span>";
-            form.reset();
-        } else {
-            if (statusDiv) statusDiv.innerHTML = "<span style='color: #ff4d4d;'>Erro ao enviar. Tente novamente.</span>";
-        }
-    } catch (error) {
-        if (statusDiv) statusDiv.innerHTML = "<span style='color: #ff4d4d;'>Erro de conexão ao enviar.</span>";
-    } finally {
-        if (btn) {
-            btn.disabled = false;
-            btn.innerText = "Enviar";
-        }
-    }
-}
+//         if (response.ok) {
+//             if (statusDiv) statusDiv.innerHTML = "<span style='color: #00ff7f; font-weight: bold;'>Mensagem enviada com sucesso!</span>";
+//             form.reset();
+//         } else {
+//             if (statusDiv) statusDiv.innerHTML = "<span style='color: #ff4d4d;'>Erro ao enviar. Tente novamente.</span>";
+//         }
+//     } catch (error) {
+//         if (statusDiv) statusDiv.innerHTML = "<span style='color: #ff4d4d;'>Erro de conexão ao enviar.</span>";
+//     } finally {
+//         if (btn) {
+//             btn.disabled = false;
+//             btn.innerText = "Enviar";
+//         }
+//     }
+// }
