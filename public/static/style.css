@@ -18,7 +18,7 @@ body {
   scroll-behavior: smooth;
   font-family: Ubuntu, arial;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   overflow-x: hidden;
 }
 
@@ -57,26 +57,32 @@ body {
   align-items: center;
   text-decoration: none;
   color: var(--branco);
-  transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in;
 }
+
 
 .sideBarDiv .menuSideBarDiv i,
 .sideBarDiv li i {
   font-size: 24px;
+  width: 60px;
+  height: 48px;
   color: var(--branco);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.9rem;
+  padding: 0;
+  transition: color 0.2s ease-in;
 }
 
-.sideBarDiv li span {
-  font-size: 20px;
-  padding: 0.4rem;
+.sideBarDiv .navegacaoSideBarDiv ul {
+  padding-left: 0;
+  margin-bottom: 0;
 }
 
-.sideBarDiv li:hover,
+.sideBarDiv li:hover i,
+.sideBarDiv li:hover a,
+.sideBarDiv li:hover span,
 .sideBarDiv .menuSideBarDiv i:hover {
   color: var(--verde);
 }
@@ -209,15 +215,73 @@ body {
 }
 
 .textLoadBar {
-display: flex;
+  display: flex;
   justify-content: space-between;
-  margin-top: 6px;}
+  margin-top: 6px;
+}
 
 .textLoadBar span {
   font-size: 12px;
   font-weight: 500;
   color: #555;
-  white-space: nowrap; /* Impede a quebra de linha individual de cada palavra */
+  white-space: nowrap;
+  /* Impede a quebra de linha individual de cada palavra */
+}
+
+.carousel-item {
+  padding: 5px;
+}
+
+.carousel-item img {
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15),
+    0 5px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-item img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+}
+
+.carousel-caption {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 12px 20px;
+  color: #111 !important;
+  bottom: 50px;
+}
+
+.carousel-text-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  color: #333;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.carousel-text-wrapper h5 {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.carousel-text-wrapper p {
+  margin: 0 auto;
+}
+
+.carousel {
+  padding-bottom: 40px;
+}
+
+.carousel-indicators {
+  bottom: 0;
+  margin-bottom: 0;
 }
 
 /* Regras Desktop (A partir de 768px) */
